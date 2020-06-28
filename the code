@@ -1,5 +1,7 @@
 #include <Servo.h>
-
+/* this code is for cntrolling two servo motors with certain degree,
+both of them will move with 30 degree each second untill they reach 
+150 degree , then they will back to the start position (0 degree) . */
 
 void setup()
 {
@@ -21,6 +23,9 @@ void setup()
   delay(1000); 
   motor1.write(150);
   motor2.write(150);
+  delay(1000); 
+  motor1.write(0);
+  motor2.write(0);
   delay(1000); 
   motor1.detach();
   motor2.detach();
